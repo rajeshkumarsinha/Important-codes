@@ -20,8 +20,9 @@ void solve(vector<vector<int> >&mat){
                 // subtract
                 // multiply jth row with mat[i][i]
                 // multiply ith row with mat[j][i]
+                int val=mat[j][i];
                 for(int k=0;k<Rank;k++){
-                    mat[j][k]=mat[j][k]*mat[i][i] - mat[i][k]*mat[j][i];
+                    mat[j][k]=mat[j][k]*mat[i][i] - mat[i][k]*val;
                 }
             }
             i++;
